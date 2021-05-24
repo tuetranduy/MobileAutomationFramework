@@ -15,7 +15,7 @@ public class HomeScreenPageIOS extends BasePageObject implements HomeScreenPage 
     IOSElement sumBtn;
 
     public HomeScreenPageIOS(AppiumDriver driver) {
-        super(driver);
+        super();
     }
 
     @Override

@@ -1,7 +1,6 @@
 package pageobjects;
 
 import controllers.AppiumBaseClass;
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.PageFactory;
 import utils.PropertyUtils;
@@ -13,7 +12,7 @@ public class BasePageObject extends AppiumBaseClass {
     public static final int IMPLICIT_WAIT = PropertyUtils.getIntProperty("implicitWait", 5);
     WaitUtils waitUtils;
 
-    public BasePageObject(AppiumDriver driver) {
+    public BasePageObject() {
         initElements();
         waitUtils = new WaitUtils();
     }

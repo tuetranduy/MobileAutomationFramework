@@ -10,7 +10,7 @@ public class HomeScreenPageAndroid extends BasePageObject implements HomeScreenP
     AndroidElement loginScreenTextView;
 
     public HomeScreenPageAndroid(AppiumDriver driver) {
-        super(driver);
+        super();
     }
 
     @Override

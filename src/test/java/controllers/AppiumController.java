@@ -4,6 +4,8 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import utils.PropertyUtils;
 
@@ -35,6 +37,10 @@ public class AppiumController {
     public AppiumDriver driver;
 
     public void setup() throws MalformedURLException {
+
+        AppiumDriverLocalService service = new AppiumServiceBuilder().usingPort(4723).build();
+        service.start();
+
         if (driver != null) {
             return;
         }

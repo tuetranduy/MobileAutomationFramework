@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id "io.qameta.allure" version "2.5"
+//    id "io.qameta.allure" version "2.5"
 }
 
 group 'tuetd.com'
@@ -24,9 +24,9 @@ test {
     useTestNG()
 }
 
-allure {
-    version = '2.2.1'
-    autoconfigure = true
-    aspectjweaver = true
-    allureJavaVersion = 1.8
-}
+//allure {
+//    version = '2.2.1'
+//    autoconfigure = true
+//    aspectjweaver = true
+//    allureJavaVersion = 1.8
+//}

@@ -1,0 +1,9 @@
+.gradle/
+.idea/
+allure-results/
+build
+.gradletasknamecache
+!gradle-wrapper.jar
+.DS_Store
+*.iml
+/*.log

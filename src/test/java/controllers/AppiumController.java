@@ -34,11 +34,11 @@ public class AppiumController {
 
     public static AppiumController instance = new AppiumController();
     public static PLATFORM platform;
+    private static AppiumDriverLocalService service = new AppiumServiceBuilder().usingPort(4723).build();
     public AppiumDriver driver;
 
     public void setup() throws MalformedURLException {
 
-        AppiumDriverLocalService service = new AppiumServiceBuilder().usingPort(4723).build();
         service.start();
 
         if (driver != null) {
@@ -88,6 +88,10 @@ public class AppiumController {
         if (driver != null) {
             driver.quit();
             driver = null;
+        }
+
+        if (service.isRunning()) {
+            service.stop();
         }
     }
 
